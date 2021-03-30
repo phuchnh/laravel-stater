@@ -18,7 +18,7 @@ class UnauthenticatedException extends \Exception
     public function render($request)
     {
         return response()->json([
-            'code' => 4010,
+            'code' => 'auth/invalid-credential',
             'message' => 'Unauthenticated.'
         ], JsonResponse::HTTP_UNAUTHORIZED);
     }

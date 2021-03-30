@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Application\API\Controllers;
+namespace Application\API\Controllers;
 
 
 use Domain\Users\Models\User;
@@ -10,6 +10,10 @@ use Support\Controllers\ApiController;
 
 class UsersController extends ApiController
 {
+    /**
+     * @param  Request  $request
+     * @return mixed
+     */
     public function index(Request $request)
     {
         return User::all();

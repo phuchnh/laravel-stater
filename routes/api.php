@@ -2,6 +2,7 @@
 
 use Application\API\Controllers\LoginController;
 use Application\API\Controllers\ProfileController;
+use Application\API\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,10 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('auth')->group(function () {
-    Route::post('login', [LoginController::class, 'login']);
-    Route::middleware('auth:sanctum')->group(function () {
-        Route::delete('logout', [LoginController::class, 'logout']);
-        Route::get('profile', ProfileController::class);
+Route::prefix('auth')
+    ->as('auth.')
+    ->group(function () {
+        Route::post('login', [LoginController::class, 'login'])->name('login');
+        Route::middleware('auth:sanctum')->group(function () {
+            Route::delete('logout', [LoginController::class, 'logout'])->name('logout');
+            Route::get('profile', ProfileController::class)->name('profile');
+        });
     });
-});
+
+Route::middleware('auth:sanctum')
+    ->group(function () {
+        Route::get('users', [UsersController::class, 'index']);
+    });

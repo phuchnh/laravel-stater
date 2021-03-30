@@ -6,7 +6,7 @@ namespace Application\API\Controllers;
 use Application\API\Requests\LoginRequest;
 use Domain\Users\Actions\IssueTokenAction;
 use Domain\Users\DataTransferObjects\LoginData;
-use Domain\Users\Exceptions\InvalidCredentialException;
+use Domain\Users\Exceptions\InvalidEmailOrPasswordException;
 use Domain\Users\Models\User;
 use Illuminate\Http\Request;
 use Support\Controllers\ApiController;
@@ -19,7 +19,7 @@ class LoginController extends ApiController
      * @param  LoginRequest  $request
      * @param  IssueTokenAction  $action
      * @return string
-     * @throws InvalidCredentialException
+     * @throws InvalidEmailOrPasswordException
      */
     public function login(LoginRequest $request, IssueTokenAction $action)
     {
@@ -35,9 +35,9 @@ class LoginController extends ApiController
      */
     public function logout(Request $request)
     {
+        /**@var $user User */
         $user = $request->user();
 
-        /**@var $user User */
         $user->tokens()->delete();
     }
 }
