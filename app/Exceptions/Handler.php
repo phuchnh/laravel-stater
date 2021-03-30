@@ -2,6 +2,8 @@
 
 namespace App\Exceptions;
 
+use Domain\Users\Exceptions\UnauthenticatedException;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
@@ -37,5 +39,14 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+    }
+
+    /**
+     * @inheritDoc
+     * @throws UnauthenticatedException
+     */
+    protected function unauthenticated($request, AuthenticationException $exception)
+    {
+        throw new UnauthenticatedException();
     }
 }
