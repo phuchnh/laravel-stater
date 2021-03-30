@@ -47,6 +47,8 @@ class Handler extends ExceptionHandler
      */
     protected function unauthenticated($request, AuthenticationException $exception)
     {
-        throw new UnauthenticatedException();
+        if ($request->isJson()) {
+            throw new UnauthenticatedException();
+        }
     }
 }
