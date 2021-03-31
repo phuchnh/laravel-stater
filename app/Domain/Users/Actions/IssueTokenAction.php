@@ -19,6 +19,7 @@ class IssueTokenAction
     public function execute(LoginData $loginData)
     {
         $user = User::where('email', $loginData->email)->first();
+
         if (!$user || !Hash::check($loginData->password, $user->password)) {
             throw new InvalidEmailOrPasswordException();
         }

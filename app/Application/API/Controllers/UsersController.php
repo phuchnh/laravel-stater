@@ -4,6 +4,7 @@
 namespace Application\API\Controllers;
 
 
+use Application\API\Resources\UserResource;
 use Domain\Users\Models\User;
 use Illuminate\Http\Request;
 use Support\Controllers\ApiController;
@@ -16,6 +17,6 @@ class UsersController extends ApiController
      */
     public function index(Request $request)
     {
-        return User::all();
+        return UserResource::collection(User::simplePaginate());
     }
 }
