@@ -5,9 +5,9 @@ namespace Application\API\Controllers;
 
 
 use Illuminate\Http\Request;
-use Application\API\Concerns\ApiController;
+use Application\API\Concerns\Controller;
 
-class ProfileController extends ApiController
+class ProfileController extends Controller
 {
     /**
      * @param  Request  $request
