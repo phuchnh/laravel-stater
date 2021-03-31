@@ -48,7 +48,7 @@ class CreateAdministrator extends Command
         $name = $this->askWithValidation('Name', 'name', ['required']);
         $email = $this->askWithValidation('Email', 'email', ['required']);
         $password = $this->askWithValidation('Password', 'password', ['required']);
-        $email_verified_at = now()->toDateTimeString();
+        $email_verified_at = now();
         $userData = new UserData(compact('name', 'email', 'password', 'email_verified_at'));
         $action->execute($userData);
     }

@@ -9,12 +9,20 @@ use Spatie\DataTransferObject\DataTransferObject;
 
 class LoginData extends DataTransferObject
 {
-    /** @var string */
+    /**
+     * @var string
+     */
     public $email;
 
-    /** @var string */
+    /**
+     * @var string
+     */
     public $password;
 
+    /**
+     * @param  LoginRequest  $request
+     * @return LoginData
+     */
     public static function fromRequest(LoginRequest $request)
     {
         return new self([

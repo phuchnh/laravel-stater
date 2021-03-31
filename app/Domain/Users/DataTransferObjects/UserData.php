@@ -8,15 +8,23 @@ use Spatie\DataTransferObject\DataTransferObject;
 
 class UserData extends DataTransferObject
 {
-    /** @var string */
+    /**
+     * @var string
+     */
     public $name;
 
-    /** @var string */
+    /**
+     * @var string
+     */
     public $email;
 
-    /** @var string */
+    /**
+     * @var string
+     */
     public $password;
 
-    /** @var string|null */
+    /**
+     * @var \Illuminate\Support\Carbon
+     */
     public $email_verified_at;
 }
