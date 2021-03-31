@@ -3,12 +3,11 @@
 
 namespace Application\API\Resources;
 
-use Domain\Users\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
- * @mixin User
+ * @mixin \Domain\Users\Models\User
  */
 class UserResource extends JsonResource
 {
@@ -22,6 +21,9 @@ class UserResource extends JsonResource
             'id' => (string) $this->id,
             'name' => (string) $this->name,
             'email' => (string) $this->email,
+            'permissions' => $this->when($request->user()->id === $this->id, function () {
+                return $this->getAllPermissions()->pluck('name');
+            }),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

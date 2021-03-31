@@ -6,6 +6,7 @@ namespace Domain\Users\Actions;
 
 use Domain\Users\Enums\UserPermissions;
 use Domain\Users\Models\Permission;
+use Domain\Users\Models\Role;
 
 class RefreshPermissionsAction
 {
@@ -22,5 +23,8 @@ class RefreshPermissionsAction
         }, UserPermissions::asArray());
 
         Permission::upsert($permissions, ['name'], ['name']);
+
+        $role = Role::updateOrCreate(['name' => 'administrator']);
+        $role->givePermissionTo(Permission::all());
     }
 }

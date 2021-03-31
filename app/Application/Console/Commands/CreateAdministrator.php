@@ -40,7 +40,6 @@ class CreateAdministrator extends Command
      * Execute the console command.
      *
      * @param  CreateAdministratorAction  $action
-     * @return void
      * @throws EmailNotUniqueException
      */
     public function handle(CreateAdministratorAction $action)

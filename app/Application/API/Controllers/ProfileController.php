@@ -4,10 +4,10 @@
 namespace Application\API\Controllers;
 
 
+use Application\API\Concerns\Controller;
 use Application\API\Resources\UserResource;
 use Domain\Users\Models\User;
 use Illuminate\Http\Request;
-use Application\API\Concerns\Controller;
 
 class ProfileController extends Controller
 {
@@ -22,6 +22,6 @@ class ProfileController extends Controller
          */
         $user = $request->user();
 
-        return (new UserResource($user->load('permissions')));
+        return (new UserResource($user));
     }
 }

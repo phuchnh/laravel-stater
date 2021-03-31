@@ -3,6 +3,7 @@
 namespace Domain\Users\Models;
 
 use Database\Factories\UserFactory;
+use Domain\Users\QueryBuilders\UserQueryBuilder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -42,13 +43,28 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * @param $value
+     */
     public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = bcrypt($value);
     }
 
+    /**
+     * @return UserFactory
+     */
     protected static function newFactory()
     {
         return UserFactory::new();
+    }
+
+    /**
+     * @param  \Illuminate\Database\Query\Builder  $query
+     * @return UserQueryBuilder
+     */
+    public function newEloquentBuilder($query)
+    {
+        return new UserQueryBuilder($query);
     }
 }

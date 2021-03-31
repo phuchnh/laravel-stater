@@ -33,6 +33,7 @@ class RefreshPermissions extends Command
 
     /**
      * Execute the console command.
+     *
      * @param  RefreshPermissionsAction  $action
      */
     public function handle(RefreshPermissionsAction $action)
