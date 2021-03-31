@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Application\Web;
+namespace Application\Web\Controllers;
 
 
 use Application\Web\Concerns\Controller;
