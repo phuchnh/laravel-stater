@@ -24,7 +24,7 @@ class UserData extends DataTransferObject
     public $password;
 
     /**
-     * @var \Illuminate\Support\Carbon
+     * @var \Illuminate\Support\Carbon|null
      */
     public $email_verified_at;
 }
