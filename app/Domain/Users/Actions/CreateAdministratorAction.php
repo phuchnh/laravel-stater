@@ -21,7 +21,10 @@ class CreateAdministratorAction
         if (User::whereEmail($userData->email)->exists()) {
             throw new EmailNotUniqueException("[{$userData->email}] has already been taken.");
         }
-        $user = User::create($userData->toArray());
+        $user = User::make($userData->toArray());
+        $user->email_verified_at = now();
+        $user->save();
+
         $role = Role::updateOrCreate(['name' => 'administrator']);
         $role->givePermissionTo(Permission::all());
         $user->assignRole($role);
