@@ -4,7 +4,9 @@
 namespace Application\Web;
 
 
-class WelcomeController
+use Application\Web\Concerns\Controller;
+
+class WelcomeController extends Controller
 {
     public function __invoke()
     {
