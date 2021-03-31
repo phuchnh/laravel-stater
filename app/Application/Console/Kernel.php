@@ -3,6 +3,7 @@
 namespace Application\Console;
 
 use Application\Console\Commands\CreateAdministrator;
+use Application\Console\Commands\RefreshPermissions;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -14,7 +15,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        CreateAdministrator::class
+        CreateAdministrator::class,
+        RefreshPermissions::class,
     ];
 
     /**

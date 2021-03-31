@@ -24,7 +24,7 @@ class CreateAdministrator extends Command
      *
      * @var string
      */
-    protected $description = 'Create an administrator';
+    protected $description = 'Create an application administrator';
 
     /**
      * Create a new command instance.
