@@ -5,7 +5,7 @@ namespace Application\API\Controllers;
 
 
 use Illuminate\Http\Request;
-use Support\Controllers\ApiController;
+use Application\API\Concerns\ApiController;
 
 class ProfileController extends ApiController
 {

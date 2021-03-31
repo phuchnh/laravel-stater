@@ -1,14 +1,14 @@
 <?php
 
 
-namespace Support\Requests;
+namespace Application\API\Concerns;
 
 use App\Exceptions\JsonValidationException;
 use Illuminate\Contracts\Validation\Validator;
-use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Foundation\Http\FormRequest as LaravelFormRequest;
 
 
-class JsonRequest extends FormRequest
+class FormRequest extends LaravelFormRequest
 {
     protected function failedValidation(Validator $validator)
     {

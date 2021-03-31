@@ -7,7 +7,7 @@ namespace Application\API\Controllers;
 use Application\API\Resources\UserResource;
 use Domain\Users\Models\User;
 use Illuminate\Http\Request;
-use Support\Controllers\ApiController;
+use Application\API\Concerns\ApiController;
 
 class UsersController extends ApiController
 {

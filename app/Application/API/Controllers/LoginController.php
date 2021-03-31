@@ -3,13 +3,13 @@
 
 namespace Application\API\Controllers;
 
+use Application\API\Concerns\ApiController;
 use Application\API\Requests\LoginRequest;
 use Domain\Users\Actions\IssueTokenAction;
 use Domain\Users\DataTransferObjects\LoginData;
 use Domain\Users\Exceptions\InvalidEmailOrPasswordException;
 use Domain\Users\Models\User;
 use Illuminate\Http\Request;
-use Support\Controllers\ApiController;
 
 class LoginController extends ApiController
 {

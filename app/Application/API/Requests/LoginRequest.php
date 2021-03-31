@@ -4,9 +4,9 @@
 namespace Application\API\Requests;
 
 
-use Support\Requests\JsonRequest;
+use Application\API\Concerns\FormRequest;
 
-class LoginRequest extends JsonRequest
+class LoginRequest extends FormRequest
 {
     public function rules()
     {
