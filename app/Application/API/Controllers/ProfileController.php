@@ -5,6 +5,7 @@ namespace Application\API\Controllers;
 
 
 use Application\API\Resources\UserResource;
+use Domain\Users\Models\User;
 use Illuminate\Http\Request;
 use Application\API\Concerns\Controller;
 
@@ -16,6 +17,11 @@ class ProfileController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return new UserResource($request->user());
+        /**
+         * @var User $user
+         */
+        $user = $request->user();
+
+        return (new UserResource($user->load('permissions')));
     }
 }
