@@ -4,7 +4,6 @@
 namespace Domain\Users\DataTransferObjects;
 
 
-use Illuminate\Support\Carbon;
 use Spatie\DataTransferObject\DataTransferObject;
 
 class UserData extends DataTransferObject
@@ -18,6 +17,6 @@ class UserData extends DataTransferObject
     /** @var string */
     public $password;
 
-    /** @var Carbon|null */
+    /** @var string|null */
     public $email_verified_at;
 }
