@@ -1,8 +1,10 @@
 <?php
 
-use Application\API\Controllers\LoginController;
-use Application\API\Controllers\ProfileController;
-use Application\API\Controllers\UsersController;
+use App\Application\API\Controllers\{
+    LoginController,
+    ProfileController,
+    UsersController
+};
 use Illuminate\Support\Facades\Route;
 
 /*

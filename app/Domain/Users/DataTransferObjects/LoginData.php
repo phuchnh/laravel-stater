@@ -4,7 +4,7 @@
 namespace Domain\Users\DataTransferObjects;
 
 
-use Application\API\Requests\LoginRequest;
+use App\Application\API\Requests\LoginRequest;
 use Spatie\DataTransferObject\DataTransferObject;
 
 class LoginData extends DataTransferObject

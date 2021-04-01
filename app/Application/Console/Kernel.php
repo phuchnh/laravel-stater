@@ -1,9 +1,9 @@
 <?php
 
-namespace Application\Console;
+namespace App\Application\Console;
 
-use Application\Console\Commands\CreateAdministrator;
-use Application\Console\Commands\RefreshPermissions;
+use App\Application\Console\Commands\CreateAdministrator;
+use App\Application\Console\Commands\RefreshPermissions;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 

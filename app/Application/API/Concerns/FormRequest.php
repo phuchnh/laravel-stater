@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Application\API\Concerns;
+namespace App\Application\API\Concerns;
 
 use App\Exceptions\JsonValidationException;
 use Illuminate\Contracts\Validation\Validator;

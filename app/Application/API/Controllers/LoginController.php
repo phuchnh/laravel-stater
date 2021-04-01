@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Application\API\Controllers;
+namespace App\Application\API\Controllers;
 
-use Application\API\Concerns\Controller;
-use Application\API\Requests\LoginRequest;
+use App\Application\API\Concerns\Controller;
+use App\Application\API\Requests\LoginRequest;
 use Domain\Users\Actions\IssueTokenAction;
 use Domain\Users\DataTransferObjects\LoginData;
 use Domain\Users\Exceptions\InvalidEmailOrPasswordException;

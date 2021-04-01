@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Application\Web\Concerns;
+namespace App\Application\Web\Concerns;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;

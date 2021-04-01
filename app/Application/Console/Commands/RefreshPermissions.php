@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\Console\Commands;
+namespace App\Application\Console\Commands;
 
 use Domain\Users\Actions\RefreshPermissionsAction;
 use Illuminate\Console\Command;

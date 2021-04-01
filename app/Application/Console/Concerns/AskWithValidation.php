@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Application\Console\Concerns;
+namespace App\Application\Console\Concerns;
 
 
 use Illuminate\Console\Concerns\InteractsWithIO;

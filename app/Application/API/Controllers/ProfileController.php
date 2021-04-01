@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Application\API\Controllers;
+namespace App\Application\API\Controllers;
 
 
-use Application\API\Concerns\Controller;
-use Application\API\Resources\UserResource;
+use App\Application\API\Concerns\Controller;
+use App\Application\API\Resources\UserResource;
 use Domain\Users\Models\User;
 use Illuminate\Http\Request;
 

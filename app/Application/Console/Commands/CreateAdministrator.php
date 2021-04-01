@@ -1,8 +1,8 @@
 <?php
 
-namespace Application\Console\Commands;
+namespace App\Application\Console\Commands;
 
-use Application\Console\Concerns\AskWithValidation;
+use App\Application\Console\Concerns\AskWithValidation;
 use Domain\Users\Actions\CreateAdministratorAction;
 use Domain\Users\DataTransferObjects\UserData;
 use Domain\Users\Exceptions\EmailNotUniqueException;

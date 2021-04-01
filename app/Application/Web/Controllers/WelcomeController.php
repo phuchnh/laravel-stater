@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Application\Web\Controllers;
+namespace App\Application\Web\Controllers;
 
 
-use Application\Web\Concerns\Controller;
+use App\Application\Web\Concerns\Controller;
 
 class WelcomeController extends Controller
 {
