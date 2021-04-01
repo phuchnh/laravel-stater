@@ -1,9 +1,9 @@
 <?php
 
-namespace Domain\Users\Models;
+namespace App\Domain\Users\Models;
 
 use Database\Factories\UserFactory;
-use Domain\Users\QueryBuilders\UserQueryBuilder;
+use App\Domain\Users\QueryBuilders\UserQueryBuilder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;

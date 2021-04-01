@@ -5,10 +5,10 @@ namespace App\Application\API\Controllers;
 
 use App\Application\API\Concerns\Controller;
 use App\Application\API\Requests\LoginRequest;
-use Domain\Users\Actions\IssueTokenAction;
-use Domain\Users\DataTransferObjects\LoginData;
-use Domain\Users\Exceptions\InvalidEmailOrPasswordException;
-use Domain\Users\Models\User;
+use App\Domain\Users\Actions\IssueTokenAction;
+use App\Domain\Users\DataTransferObjects\LoginData;
+use App\Domain\Users\Exceptions\InvalidEmailOrPasswordException;
+use App\Domain\Users\Models\User;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller

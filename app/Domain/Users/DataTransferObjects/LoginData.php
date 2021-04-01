@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Domain\Users\DataTransferObjects;
+namespace App\Domain\Users\DataTransferObjects;
 
 
 use App\Application\API\Requests\LoginRequest;

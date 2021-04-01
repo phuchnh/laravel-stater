@@ -6,7 +6,7 @@ namespace App\Application\API\Controllers;
 
 use App\Application\API\Concerns\Controller;
 use App\Application\API\Resources\UserResource;
-use Domain\Users\Models\User;
+use App\Domain\Users\Models\User;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Domain\Users\Enums;
+namespace App\Domain\Users\Enums;
 
 
 use BenSampo\Enum\Enum;

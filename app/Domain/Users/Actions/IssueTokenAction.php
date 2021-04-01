@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Domain\Users\Actions;
+namespace App\Domain\Users\Actions;
 
 
-use Domain\Users\DataTransferObjects\LoginData;
-use Domain\Users\Exceptions\InvalidEmailOrPasswordException;
-use Domain\Users\Models\User;
+use App\Domain\Users\DataTransferObjects\LoginData;
+use App\Domain\Users\Exceptions\InvalidEmailOrPasswordException;
+use App\Domain\Users\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class IssueTokenAction

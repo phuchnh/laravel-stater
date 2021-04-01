@@ -1,14 +1,14 @@
 <?php
 
 
-namespace Domain\Users\Actions;
+namespace App\Domain\Users\Actions;
 
 
-use Domain\Users\DataTransferObjects\UserData;
-use Domain\Users\Exceptions\EmailNotUniqueException;
-use Domain\Users\Models\Permission;
-use Domain\Users\Models\Role;
-use Domain\Users\Models\User;
+use App\Domain\Users\DataTransferObjects\UserData;
+use App\Domain\Users\Exceptions\EmailNotUniqueException;
+use App\Domain\Users\Models\Permission;
+use App\Domain\Users\Models\Role;
+use App\Domain\Users\Models\User;
 
 class CreateAdministratorAction
 {

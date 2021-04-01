@@ -2,7 +2,7 @@
 
 namespace App\Exceptions;
 
-use Domain\Users\Exceptions\UnauthenticatedException;
+use App\Domain\Users\Exceptions\UnauthenticatedException;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;

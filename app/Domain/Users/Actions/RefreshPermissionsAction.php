@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Domain\Users\Actions;
+namespace App\Domain\Users\Actions;
 
 
-use Domain\Users\Enums\UserPermissions;
-use Domain\Users\Models\Permission;
-use Domain\Users\Models\Role;
+use App\Domain\Users\Enums\UserPermissions;
+use App\Domain\Users\Models\Permission;
+use App\Domain\Users\Models\Role;
 
 class RefreshPermissionsAction
 {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Domain\Users\Models;
+namespace App\Domain\Users\Models;
 
 
 class Permission extends \Spatie\Permission\Models\Permission

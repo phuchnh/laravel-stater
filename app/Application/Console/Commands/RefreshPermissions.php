@@ -2,7 +2,7 @@
 
 namespace App\Application\Console\Commands;
 
-use Domain\Users\Actions\RefreshPermissionsAction;
+use App\Domain\Users\Actions\RefreshPermissionsAction;
 use Illuminate\Console\Command;
 
 class RefreshPermissions extends Command

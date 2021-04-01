@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\Users\Models;
+namespace App\Domain\Users\Models;
 
 use Laravel\Sanctum\PersonalAccessToken as SanctumPersonalAccessToken;
 

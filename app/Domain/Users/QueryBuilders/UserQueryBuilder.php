@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Domain\Users\QueryBuilders;
+namespace App\Domain\Users\QueryBuilders;
 
 use Illuminate\Database\Eloquent\Builder;
 
 /**
- * @mixin \Domain\Users\Models\User
+ * @mixin \App\Domain\Users\Models\User
  */
 class UserQueryBuilder extends Builder
 {

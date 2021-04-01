@@ -3,9 +3,9 @@
 namespace App\Application\Console\Commands;
 
 use App\Application\Console\Concerns\AskWithValidation;
-use Domain\Users\Actions\CreateAdministratorAction;
-use Domain\Users\DataTransferObjects\UserData;
-use Domain\Users\Exceptions\EmailNotUniqueException;
+use App\Domain\Users\Actions\CreateAdministratorAction;
+use App\Domain\Users\DataTransferObjects\UserData;
+use App\Domain\Users\Exceptions\EmailNotUniqueException;
 use Illuminate\Console\Command;
 
 class CreateAdministrator extends Command
