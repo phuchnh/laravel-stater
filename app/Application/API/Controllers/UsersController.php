@@ -19,4 +19,8 @@ class UsersController extends Controller
     {
         return UserResource::collection(User::simplePaginate());
     }
+
+    public function store() {
+
+    }
 }
