@@ -13,9 +13,10 @@ class UserDataFactory
      * @param  Request  $request
      * @return UserData
      */
-    public function fromRequest(Request $request)
+    public function createFromRequest(Request $request)
     {
         return new UserData([
+            'name' => $request->get('name'),
             'email' => $request->get('email'),
             'password' => $request->get('password'),
         ]);

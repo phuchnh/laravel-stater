@@ -4,7 +4,6 @@
 namespace App\Domain\Users\Actions;
 
 
-use App\Domain\Users\DataTransferObjects\AuthData;
 use App\Domain\Users\Exceptions\InvalidEmailOrPasswordException;
 use App\Domain\Users\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -12,15 +11,16 @@ use Illuminate\Support\Facades\Hash;
 class IssueTokenAction
 {
     /**
-     * @param  AuthData  $loginData
+     * @param  string  $email
+     * @param  string  $password
      * @return string
      * @throws InvalidEmailOrPasswordException
      */
-    public function execute(AuthData $loginData)
+    public function execute($email, $password)
     {
-        $user = User::where('email', $loginData->email)->first();
+        $user = User::where('email', $email)->first();
 
-        if (!$user || !Hash::check($loginData->password, $user->password)) {
+        if (!$user || !Hash::check($password, $user->password)) {
             throw new InvalidEmailOrPasswordException();
         }
 
