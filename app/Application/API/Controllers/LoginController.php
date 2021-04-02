@@ -4,9 +4,9 @@
 namespace App\Application\API\Controllers;
 
 use App\Application\API\Concerns\Controller;
+use App\Application\API\Factory\AuthDataFactory;
 use App\Application\API\Requests\LoginRequest;
 use App\Domain\Users\Actions\IssueTokenAction;
-use App\Domain\Users\DataTransferObjects\LoginData;
 use App\Domain\Users\Exceptions\InvalidEmailOrPasswordException;
 use App\Domain\Users\Models\User;
 use Illuminate\Http\Request;
@@ -24,7 +24,9 @@ class LoginController extends Controller
     public function login(LoginRequest $request, IssueTokenAction $action)
     {
         return response()->json([
-            'token' => $action->execute(LoginData::fromRequest($request))
+            'token' => $action->execute(
+                (new AuthDataFactory())->fromRequest($request)
+            )
         ]);
     }
 
